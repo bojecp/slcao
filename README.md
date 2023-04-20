@@ -1,0 +1,2 @@
+# slcao
+SemanticLCA project ontology
