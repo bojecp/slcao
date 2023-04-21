@@ -20,6 +20,8 @@ The current version of the ontology is not final, and represents work in progres
 You can directly import to Protégé a merged ontology file using this raw link:
 https://raw.githubusercontent.com/bojecp/slcao/main/owl/slca.owl
 
+The competency questions used as part of the development of the ontology are available [here](https://github.com/bojecp/slcao/blob/main/CompetencyQuestions.md)
+
 # about SemanticLCA
 
 The SemanticLCA research project is an international collaboration effort between the Luxembourg

@@ -1,3 +1,7 @@
+# Competency Questions
+
+This table lists the competency questions that were derived as part of the ontology development methodology.
+
 |Number|Competency Question|
 |-|---------------------------------------------|
 |1|What are the available LCA impact categories?|
