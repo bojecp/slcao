@@ -1,0 +1,335 @@
+@prefix : <https://github.com/bojecp/slcao/owl/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix slca-meta: <https://github.com/bojecp/slcao/owl/meta/> .
+@base <https://github.com/bojecp/slcao/owl/meta/> .
+
+<https://github.com/bojecp/slcao/owl/meta/> rdf:type owl:Ontology ;
+                                             owl:imports <https://github.com/bojecp/slcao/owl/building/> ,
+                                                         <https://github.com/bojecp/slcao/owl/district/> ,
+                                                         <https://github.com/bojecp/slcao/owl/lca/> ,
+                                                         <https://github.com/bojecp/slcao/owl/sense/> ,
+                                                         <https://github.com/bojecp/slcao/owl/state/> ,
+                                                         <https://github.com/bojecp/slcao/owl/weight/> ;
+                                             dc:title "SLCA-Meta"@en ;
+                                             dcterms:contributor "Cardiff University" ,
+                                                                 "Luxembourg Institute of Science and Technology" ;
+                                             dcterms:license "https://creativecommons.org/licenses/by-sa/4.0/" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/bojecp/slcao/owl/meta/actsOn
+:actsOn rdf:type owl:ObjectProperty ;
+        rdfs:domain :Actuator ;
+        rdfs:range :Building ,
+                   :District ;
+        rdfs:label "actsOn"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/associates
+:associates rdf:type owl:ObjectProperty ;
+            rdfs:domain :State ;
+            rdfs:range :Service ;
+            rdfs:label "associates"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/buildingHasAddress
+:buildingHasAddress rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://github.com/bojecp/slcao/owl/building/Building> ;
+                    rdfs:range <https://github.com/bojecp/slcao/owl/district/Address> ;
+                    rdfs:label "hasAddress" .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/considersCategory
+:considersCategory rdf:type owl:ObjectProperty ;
+                   rdfs:domain <https://github.com/bojecp/slcao/owl/weight/Weight> ;
+                   rdfs:range <https://github.com/bojecp/slcao/owl/lca/ImpactCategory> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/considersResults
+:considersResults rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://github.com/bojecp/slcao/owl/weight/WeightingMethod> ;
+                  rdfs:range <https://github.com/bojecp/slcao/owl/state/Result> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasAssociatedBuilding
+:hasAssociatedBuilding rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://github.com/bojecp/slcao/owl/state/BuildingState> ;
+                       rdfs:range <https://github.com/bojecp/slcao/owl/building/Building> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasAssociatedDistrict
+:hasAssociatedDistrict rdf:type owl:ObjectProperty ;
+                       rdfs:domain <https://github.com/bojecp/slcao/owl/state/DistrictState> ;
+                       rdfs:range <https://github.com/bojecp/slcao/owl/district/District> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasAssociatedElement
+:hasAssociatedElement rdf:type owl:ObjectProperty ;
+                      rdfs:domain <https://github.com/bojecp/slcao/owl/state/ElementState> ;
+                      rdfs:range <https://github.com/bojecp/slcao/owl/building/Element> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasAssociatedProcess
+:hasAssociatedProcess rdf:type owl:ObjectProperty ;
+                      rdfs:domain <https://github.com/bojecp/slcao/owl/building/MaterialType> ;
+                      rdfs:range <https://github.com/bojecp/slcao/owl/lca/LcaProcess> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasBuilding
+:hasBuilding rdf:type owl:ObjectProperty ;
+             rdfs:domain <https://github.com/bojecp/slcao/owl/district/DistrictZone> ;
+             rdfs:range <https://github.com/bojecp/slcao/owl/building/Building> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasEnergyConsumptionQuantity
+:hasEnergyConsumptionQuantity rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://github.com/bojecp/slcao/owl/lca/LcaInventory> ;
+                              rdfs:range <https://github.com/bojecp/slcao/owl/building/EnergyConsumption> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasMaterialQuantity
+:hasMaterialQuantity rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://github.com/bojecp/slcao/owl/lca/LcaInventory> ;
+                     rdfs:range <https://github.com/bojecp/slcao/owl/building/Material> .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/hasSensor
+:hasSensor rdf:type owl:ObjectProperty ;
+           rdfs:domain <https://github.com/bojecp/slcao/owl/building/Building> ,
+                       <https://github.com/bojecp/slcao/owl/building/Element> ,
+                       <https://github.com/bojecp/slcao/owl/building/SpatialElement> ,
+                       <https://github.com/bojecp/slcao/owl/district/City> ,
+                       <https://github.com/bojecp/slcao/owl/district/District> ,
+                       <https://github.com/bojecp/slcao/owl/district/DistrictZone> ,
+                       <https://github.com/bojecp/slcao/owl/district/Network> ,
+                       <https://github.com/bojecp/slcao/owl/district/Street> ;
+           rdfs:range :Sensor .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/isInputForRecommendation
+:isInputForRecommendation rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Result ,
+                                      :WeightingMethod ;
+                          rdfs:range :Recommendation .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/isInputForWeightingMethod
+:isInputForWeightingMethod rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Result ;
+                           rdfs:range :WeightingMethod .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/providesResults
+:providesResults rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Service ;
+                 rdfs:range :Result ;
+                 rdfs:label "provides"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/tracksContextOf
+:tracksContextOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :State ;
+                 rdfs:range :Building ,
+                            :District .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/triggersActuator
+:triggersActuator rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Recommendation ;
+                  rdfs:range :Actuator .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/weatherCapturedBy
+:weatherCapturedBy rdf:type owl:ObjectProperty ;
+                   rdfs:domain <https://github.com/bojecp/slcao/owl/district/Weather> ;
+                   rdfs:range :Sensor .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/bojecp/slcao/owl/building/Building
+<https://github.com/bojecp/slcao/owl/building/Building> rdf:type owl:Class ;
+                                         owl:equivalentClass :Building .
+
+
+###  https://github.com/bojecp/slcao/owl/building/Element
+<https://github.com/bojecp/slcao/owl/building/Element> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/building/EnergyConsumption
+<https://github.com/bojecp/slcao/owl/building/EnergyConsumption> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/building/Material
+<https://github.com/bojecp/slcao/owl/building/Material> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/building/MaterialType
+<https://github.com/bojecp/slcao/owl/building/MaterialType> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/building/SpatialElement
+<https://github.com/bojecp/slcao/owl/building/SpatialElement> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/district/Address
+<https://github.com/bojecp/slcao/owl/district/Address> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/district/City
+<https://github.com/bojecp/slcao/owl/district/City> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/district/District
+<https://github.com/bojecp/slcao/owl/district/District> rdf:type owl:Class ;
+                                         owl:equivalentClass :District .
+
+
+###  https://github.com/bojecp/slcao/owl/district/DistrictZone
+<https://github.com/bojecp/slcao/owl/district/DistrictZone> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/district/Network
+<https://github.com/bojecp/slcao/owl/district/Network> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/district/Street
+<https://github.com/bojecp/slcao/owl/district/Street> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/district/Weather
+<https://github.com/bojecp/slcao/owl/district/Weather> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/lca/ImpactCategory
+<https://github.com/bojecp/slcao/owl/lca/ImpactCategory> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/lca/LcaInventory
+<https://github.com/bojecp/slcao/owl/lca/LcaInventory> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/lca/LcaProcess
+<https://github.com/bojecp/slcao/owl/lca/LcaProcess> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/state/BuildingState
+<https://github.com/bojecp/slcao/owl/state/BuildingState> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/state/DistrictState
+<https://github.com/bojecp/slcao/owl/state/DistrictState> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/state/ElementState
+<https://github.com/bojecp/slcao/owl/state/ElementState> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/state/Result
+<https://github.com/bojecp/slcao/owl/state/Result> rdf:type owl:Class ;
+                                    owl:equivalentClass :Result .
+
+
+###  https://github.com/bojecp/slcao/owl/state/Service
+<https://github.com/bojecp/slcao/owl/state/Service> rdf:type owl:Class ;
+                                     owl:equivalentClass :Service .
+
+
+###  https://github.com/bojecp/slcao/owl/state/State
+<https://github.com/bojecp/slcao/owl/state/State> rdf:type owl:Class ;
+                                   owl:equivalentClass :State .
+
+
+###  https://github.com/bojecp/slcao/owl/weight/Weight
+<https://github.com/bojecp/slcao/owl/weight/Weight> rdf:type owl:Class .
+
+
+###  https://github.com/bojecp/slcao/owl/weight/WeightingMethod
+<https://github.com/bojecp/slcao/owl/weight/WeightingMethod> rdf:type owl:Class ;
+                                              owl:equivalentClass :WeightingMethod .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/Actuator
+:Actuator rdf:type owl:Class ;
+          rdfs:label "Actuator"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/Building
+:Building rdf:type owl:Class ;
+          rdfs:label "Building"@en ,
+                     "Building_Ontology"@iri-based .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/District
+:District rdf:type owl:Class ;
+          rdfs:label "DIstrict"@en ,
+                     "DIstrict"@iri-based .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/Recommendation
+:Recommendation rdf:type owl:Class ;
+                rdfs:label "Recommendation"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/Result
+:Result rdf:type owl:Class ;
+        rdfs:label "Result"@en ,
+                   "Result"@iri-based .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:label "Sensor"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/Service
+:Service rdf:type owl:Class ;
+         rdfs:label "Service"@en .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/State
+:State rdf:type owl:Class ;
+       rdfs:label "State"@en ,
+                  "State"@iri-based .
+
+
+###  https://github.com/bojecp/slcao/owl/meta/WeightingMethod
+:WeightingMethod rdf:type owl:Class ;
+                 rdfs:label "WeightingMethod"@en ,
+                            "WeightingMethod"@iri-based .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
