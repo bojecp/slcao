@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://slca.org/slca/sense/"
+     xml:base="http://slca.org/slca/sense/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:slca-sense="http://slca.org/slca/sense/">
+    <owl:Ontology rdf:about="https://github.com/bojecp/slcao/owl/sense/">
+        <dc:title xml:lang="en">SLCA-Sense</dc:title>
+        <dcterms:contributor>Cardiff University</dcterms:contributor>
+        <dcterms:contributor>Luxembourg Institute of Science and Technology</dcterms:contributor>
+        <dcterms:license>https://creativecommons.org/licenses/by-sa/4.0/</dcterms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasConfig -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasConfig">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorConfiguration"/>
+        <rdfs:label xml:lang="en">hasConfig</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasConfig</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasHistory -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasHistory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorHistory"/>
+        <rdfs:label xml:lang="en">hasHistory</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasHistory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasLocation -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasLocation">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorLocation"/>
+        <rdfs:label xml:lang="en">hasLocation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasLocation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasMeasureType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasMeasureType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorType"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/MeasurementType"/>
+        <rdfs:label xml:lang="en">hasMeasureType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasMeasureType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasReading -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasReading">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/Values"/>
+        <rdfs:label xml:lang="en">hasReading</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasReading</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasTable -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasTable">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorDatabase"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorsTable"/>
+        <rdfs:label xml:lang="en">hasTable</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasTable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/hasType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/hasType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorType"/>
+        <rdfs:label xml:lang="en">hasType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/recordsReading -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/recordsReading">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorsTable"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/Values"/>
+        <rdfs:label xml:lang="en">recordsReading</rdfs:label>
+        <rdfs:label xml:lang="iri-based">recordsReading</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/recordsSensor -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/recordsSensor">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorsTable"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:label xml:lang="en">recordsSensor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">recordsSensor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/resultsGeneratedFrom -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/resultsGeneratedFrom">
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/sense/VirtualSensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/lastCalibration -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/lastCalibration">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lastCalibration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/measureLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/measureLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">measureLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/measureLabelDb -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/measureLabelDb">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">measureLabelDb</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/measureSymbol -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/measureSymbol">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">measureSymbol</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/measureUnit -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/measureUnit">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">measureUnit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/previousLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/previousLocation">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">previousLocation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/readingTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/readingTimestamp">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Values"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">readingTimestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/readingType -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/readingType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Values"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">readingType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/readingValu -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/readingValu">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/Values"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">readingValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/sensorLocationName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/sensorLocationName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">sensorLocationName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/sensorTableName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/sensorTableName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorsTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">sensorTableName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/sensorTypeCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/sensorTypeCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">category</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/sensorTypeLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/sense/sensorTypeLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/sense/SensorType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">sensorTypeLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/MeasurementType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/MeasurementType">
+        <rdfs:label xml:lang="en">MeasurementType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">MeasurementType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/PhysicalSensor -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/PhysicalSensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:label>Physical Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/Sensor -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/Sensor">
+        <rdfs:label xml:lang="en">Sensor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/SensorConfiguration -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/SensorConfiguration">
+        <rdfs:label xml:lang="en">SensorConfiguration</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SensorConfiguration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/SensorDatabase -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/SensorDatabase">
+        <rdfs:label xml:lang="en">SensorDatabase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/SensorHistory -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/SensorHistory">
+        <rdfs:label xml:lang="en">SensorHistory</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SensorHistory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/SensorLocation -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/SensorLocation">
+        <rdfs:label xml:lang="en">SensorLocation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SensorLocation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/SensorType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/SensorType">
+        <rdfs:label xml:lang="en">SensorType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SensorType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/SensorsTable -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/SensorsTable">
+        <rdfs:label xml:lang="en">SensorsTable</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SensorsTable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/Values -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/Values">
+        <rdfs:label xml:lang="en">Reading</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Values</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/sense/VirtualSensor -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/sense/VirtualSensor">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/sense/Sensor"/>
+        <rdfs:label>Virtual Sensor</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
