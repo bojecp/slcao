@@ -1,0 +1,494 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://slca.org/slca/district/"
+     xml:base="http://slca.org/slca/district/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:slca-district="http://slca.org/slca/district/">
+    <owl:Ontology rdf:about="https://github.com/bojecp/slcao/owl/district/">
+        <dc:title xml:lang="en">SLCA-District</dc:title>
+        <terms:contributor>Cardiff University</terms:contributor>
+        <terms:contributor>Luxembourg Institute of Science and Technology</terms:contributor>
+        <terms:license>https://creativecommons.org/licenses/by-sa/4.0/</terms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/cityHasWeatherConditions -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/cityHasWeatherConditions">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/City"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Weather"/>
+        <rdfs:label xml:lang="en">hasWeatherCond</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/containsDistrict -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/containsDistrict">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/City"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:label xml:lang="en">containsDistrict</rdfs:label>
+        <rdfs:label xml:lang="iri-based">containsDistrict</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasBoundary -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasBoundary">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Boundary"/>
+        <rdfs:label xml:lang="en">hasBoundary</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasBoundary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasConsumption -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasConsumption">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Network"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Consumption"/>
+        <rdfs:label xml:lang="en">hasConsumption</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasConsumption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasDistrictArchetype -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasDistrictArchetype">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictArchetype"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasDistrictZone -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasDistrictZone">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictZone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasDistrictZoneType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasDistrictZoneType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictZone"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictZoneType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasNetType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasNetType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Network"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/NetworkType"/>
+        <rdfs:label xml:lang="en">hasNetType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasNetType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasNetwork -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasNetwork">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Network"/>
+        <rdfs:label xml:lang="en">hasNetwork</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasNetwork</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasStreet -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasStreet">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Street"/>
+        <rdfs:label xml:lang="en">hasStreet</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasStreet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/hasWeather -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/hasWeather">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Weather"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/streetHasAddress -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/streetHasAddress">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Street"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Address"/>
+        <rdfs:label xml:lang="en">hasAddress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/zoneHasAddress -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/district/zoneHasAddress">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictZone"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/district/Address"/>
+        <rdfs:label xml:lang="en">hasAddress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/addressCountry -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/addressCountry">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">countryName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/addressPostcode -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/addressPostcode">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">postcode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/addressStreet -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/addressStreet">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">streetName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/addressStreetNo -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/addressStreetNo">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Address"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">streetNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/boundaryBrep -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/boundaryBrep">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Boundary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">brep</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/boundaryCoordinates -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/boundaryCoordinates">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Boundary"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">startCoordinates</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/cityCountry -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/cityCountry">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">cityCountry</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/cityName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/cityName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">cityName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/districtArchetypeLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/districtArchetypeLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictArchetype"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">archetypeLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/districtCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/districtCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictArchetype"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">category</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/districtName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/districtName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/District"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/networkTypeLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/networkTypeLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/NetworkType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">networkLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/streetName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/streetName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/Street"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">streetName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/zoneTypeCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/zoneTypeCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictZoneType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">zoneCategory</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/zoneTypeLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/district/zoneTypeLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/district/DistrictZoneType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">zoneLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Address -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Address">
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Boundary -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Boundary">
+        <rdfs:label xml:lang="en">Boundary</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/BuildingZone -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/BuildingZone">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/district/Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/City -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/City">
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:label xml:lang="iri-based">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Consumption -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Consumption">
+        <rdfs:label xml:lang="en">Consumption</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Consumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/District -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/District">
+        <rdfs:label>District</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/DistrictArchetype -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/DistrictArchetype">
+        <rdfs:label xml:lang="en">DisArchetype</rdfs:label>
+        <rdfs:label xml:lang="iri-based">DisArchetype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/DistrictZone -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/DistrictZone">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/district/Zone"/>
+        <rdfs:label xml:lang="en">District Zone</rdfs:label>
+        <rdfs:label xml:lang="iri-based">District Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/DistrictZoneType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/DistrictZoneType">
+        <rdfs:label xml:lang="en">District Zone Type</rdfs:label>
+        <rdfs:label xml:lang="iri-based">District Zone Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Network -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Network">
+        <rdfs:label xml:lang="en">Network</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Network</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/NetworkType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/NetworkType">
+        <rdfs:label xml:lang="en">NetworkType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">NetworkType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Street -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Street">
+        <rdfs:label xml:lang="en">Street</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Street</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Weather -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Weather">
+        <rdfs:label xml:lang="en">WeatherConditions</rdfs:label>
+        <rdfs:label xml:lang="iri-based">WeatherConditions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/district/Zone -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/district/Zone">
+        <rdfs:label>Zone</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
