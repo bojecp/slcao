@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://slca.org/slca/lca/"
+     xml:base="http://slca.org/slca/lca/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:slca-lca="http://slca.org/slca/lca/">
+    <owl:Ontology rdf:about="https://github.com/bojecp/slcao/owl/lca/">
+        <dc:title xml:lang="en">SLCA-LifeCycleAssessment</dc:title>
+        <dcterms:contributor>Cardiff University</dcterms:contributor>
+        <dcterms:contributor>Luxembourg Institute of Science and Technology</dcterms:contributor>
+        <dcterms:license>https://creativecommons.org/licenses/by-sa/4.0/</dcterms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/assignedToImpactCategory -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/assignedToImpactCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaResult"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/consistsOf -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/consistsOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaInventory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/definesProcess -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/definesProcess">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaDatabase"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaProcess"/>
+        <rdfs:label xml:lang="en">definesProcess</rdfs:label>
+        <rdfs:label xml:lang="iri-based">definesProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasAssociation -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasAssociation">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/EmissionType"/>
+        <rdfs:label xml:lang="en">hasAssociation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasAssociation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasCategories -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasCategories">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaiMethod"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:label xml:lang="en">hasCategories</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasCategories</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasCategory -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaiMethod"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:label>hasCategory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasCategoryIndicator -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasCategoryIndicator">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/CategoryIndicator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasEmission -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasEmission">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaResult"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/Emission"/>
+        <rdfs:label xml:lang="en">hasEmission</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasEmission</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasEmissionType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasEmissionType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/Emission"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/EmissionType"/>
+        <rdfs:label xml:lang="en">hasEmissionType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasEmissionType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasIndicatorResults -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasIndicatorResults">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaCalculation"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/CategoryIndicator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasInventory -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasInventory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LifecycleStage"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaInventory"/>
+        <rdfs:label xml:lang="en">hasInventory</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasInventory</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasMethod -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasMethod">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaCalculation"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaiMethod"/>
+        <rdfs:label xml:lang="en">hasMethod</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasMethod</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasProcess -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasProcess">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaInventory"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaProcess"/>
+        <rdfs:label xml:lang="en">hasProcess</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/hasResults -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/hasResults">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaCalculation"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaResult"/>
+        <rdfs:label xml:lang="en">hasResults</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasResults</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/ic-input -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/ic-input">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaCalculation"/>
+        <rdfs:label xml:lang="iri-based">ic-input</rdfs:label>
+        <rdfs:label xml:lang="en">inputFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/inv-input -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/inv-input">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaInventory"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaCalculation"/>
+        <rdfs:label xml:lang="en">inputFor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">inv-input</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/categoryIndicatorName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/categoryIndicatorName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/CategoryIndicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/emissionSubstance -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/emissionSubstance">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/EmissionType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">emissionSubstance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/emissionUnits -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/emissionUnits">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/EmissionType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">emissionUnits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/impactName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/impactName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">impactName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/lcaDbLocation -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/lcaDbLocation">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaDatabase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lcaDbLocation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/lcaDbName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/lcaDbName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaDatabase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lcaDbName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/lcaProcessCode -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/lcaProcessCode">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lcaProcessCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/lcaProcessDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/lcaProcessDescription">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/lcaProcessName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/lcaProcessName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lcaProcessName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/lcaiMethodName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/lca/lcaiMethodName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaiMethod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lcaiMethodName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/CategoryIndicator -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/CategoryIndicator"/>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/Emission -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/Emission">
+        <rdfs:label xml:lang="en">Emission</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Emission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/EmissionType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/EmissionType">
+        <rdfs:label xml:lang="en">EmissionType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">EmissionType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/ImpactCategory -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/ImpactCategory">
+        <rdfs:label xml:lang="en">ImpactCategory</rdfs:label>
+        <rdfs:label xml:lang="iri-based">ImpactCategory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LcaCalculation -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LcaCalculation">
+        <rdfs:label xml:lang="en">LcaCalculation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaCalculation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LcaDatabase -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LcaDatabase">
+        <rdfs:label xml:lang="en">LcaDatabase</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaDatabase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LcaInventory -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LcaInventory">
+        <rdfs:label xml:lang="en">LcaInventory</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaInventory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LcaProcess -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LcaProcess">
+        <rdfs:label xml:lang="en">LcaProcess</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LcaResult -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LcaResult">
+        <rdfs:label xml:lang="en">LcaResult</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaResult</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LcaiMethod -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LcaiMethod">
+        <rdfs:label xml:lang="en">LcaiMethod</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaiMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/LifecycleStage -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/LifecycleStage">
+        <rdfs:label xml:lang="en">Lifecycle Stage</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Lifecycle Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/MaterialProcess -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/MaterialProcess">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/lca/LcaProcess"/>
+        <rdfs:label xml:lang="en">MaterialProcess</rdfs:label>
+        <rdfs:label xml:lang="iri-based">MaterialProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/lca/Subcategories -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/lca/Subcategories">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/lca/ImpactCategory"/>
+        <rdfs:label xml:lang="en">Subcategories</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Subcategories</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
