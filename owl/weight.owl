@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://slca.org/slca/weight/"
+     xml:base="http://slca.org/slca/weight/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:slca-weight="http://slca.org/slca/weight/">
+    <owl:Ontology rdf:about="https://github.com/bojecp/slcao/owl/weight/">
+        <dc:title xml:lang="en">SLCA-Weghting</dc:title>
+        <dcterms:contributor xml:lang="en">Cardiff University</dcterms:contributor>
+        <dcterms:contributor xml:lang="en">Luxembourg Institute of Science and Technology</dcterms:contributor>
+        <dcterms:license xml:lang="en">https://creativecommons.org/licenses/by-sa/4.0/</dcterms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/contains -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/contains">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethod"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/weight/Weight"/>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+        <rdfs:label xml:lang="iri-based">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/hasScore -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/hasScore">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethod"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/weight/Score"/>
+        <rdfs:label xml:lang="en">hasScore</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasScore</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/hasWeightingMethodType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/hasWeightingMethodType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethod"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethodType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/factor -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/factor">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/Weight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">factor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">factor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/lastCalculated -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/lastCalculated">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lastApplied</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/methodId -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/methodId">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethod"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">methodId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/scoreValue -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/scoreValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/Score"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/type -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/type">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/Weight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+        <rdfs:label xml:lang="iri-based">type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/weightingMethodCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/weightingMethodCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethodType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/weightingMethodName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/weight/weightingMethodName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/weight/WeightingMethodType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/MultiScore -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/weight/MultiScore">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/weight/Score"/>
+        <rdfs:label xml:lang="en">MultiScore</rdfs:label>
+        <rdfs:label xml:lang="iri-based">MultiScore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/Score -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/weight/Score">
+        <rdfs:label xml:lang="en">Score</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Score</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/SingleScore -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/weight/SingleScore">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/weight/Score"/>
+        <rdfs:label xml:lang="en">SingleScore</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SingleScore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/Weight -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/weight/Weight">
+        <rdfs:label xml:lang="en">Weight</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/WeightingMethod -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/weight/WeightingMethod">
+        <rdfs:label xml:lang="en">Weighting Method</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Weighting Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/weight/WeightingMethodType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/weight/WeightingMethodType">
+        <rdfs:label xml:lang="en">MethodType</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
