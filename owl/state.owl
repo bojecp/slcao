@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://slca.org/slca/state/"
+     xml:base="http://slca.org/slca/state/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:slca-state="http://slca.org/slca/state/">
+    <owl:Ontology rdf:about="https://github.com/bojecp/slcao/owl/state/">
+        <dc:title xml:lang="en">SLCA-State</dc:title>
+        <dcterms:contributor>Cardiff University</dcterms:contributor>
+        <dcterms:contributor>Luxembourg Institute of Science and Technology</dcterms:contributor>
+        <dcterms:contributor>https://creativecommons.org/licenses/by-sa/4.0/</dcterms:contributor>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/associatedService -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/associatedService">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/VirtualState"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:label xml:lang="en">associatedService</rdfs:label>
+        <rdfs:label xml:lang="iri-based">associatedService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasConfiguration -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasConfiguration">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/Configuration"/>
+        <rdfs:label xml:lang="en">hasConfiguration</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasConfiguration</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasPhysical -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasPhysical">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/PhysicalState"/>
+        <rdfs:label xml:lang="en">hasPhysical</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasPhysical</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasPredecessor -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasPredecessor">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:label xml:lang="en">hasPredecessor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasPredecessor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasResult -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasResult">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/Result"/>
+        <rdfs:label xml:lang="en">hasResult</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasSensedData -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasSensedData">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/PhysicalState"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/SensorDatabase"/>
+        <rdfs:label xml:lang="en">hasSensedData</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasSensedData</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasSuccessor -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasSuccessor">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:label xml:lang="en">hasSuccessor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasSuccessor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasTime -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasTime">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/Time"/>
+        <rdfs:label xml:lang="en">hasTime</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/hasVirtual -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/hasVirtual">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/VirtualState"/>
+        <rdfs:label xml:lang="en">hasVirtual</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasVirtual</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/usedService -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/state/usedService">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/VirtualState"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:label xml:lang="en">usedService</rdfs:label>
+        <rdfs:label xml:lang="iri-based">usedService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/endTime -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/endTime">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Time"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/inputParameters -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/inputParameters">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Configuration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">inputParameters</rdfs:label>
+        <rdfs:label xml:lang="iri-based">inputParameters</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/isTheoretical -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/isTheoretical">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/outputParameters -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/outputParameters">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Result"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/serviceAddress -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/serviceAddress">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">serviceAddress</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/serviceLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/serviceLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">serviceLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/startTime -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/startTime">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/Time"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/stateId -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/stateId">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">stateId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/stateLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/state/stateLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/state/State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">stateLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/BuildingState -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/BuildingState">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/PhysicalState"/>
+        <rdfs:label xml:lang="en">BuildingState</rdfs:label>
+        <rdfs:label xml:lang="iri-based">BuildingState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Configuration -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Configuration">
+        <rdfs:label xml:lang="en">Configuration</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Configuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/DistrictState -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/DistrictState">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/PhysicalState"/>
+        <rdfs:label xml:lang="en">DistrictState</rdfs:label>
+        <rdfs:label xml:lang="iri-based">DistrictState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/ElementState -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/ElementState">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/PhysicalState"/>
+        <rdfs:label xml:lang="en">ElementState</rdfs:label>
+        <rdfs:label xml:lang="iri-based">ElementState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/LcaCalculation -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/LcaCalculation">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:label xml:lang="en">LcaCalculation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">LcaCalculation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/LcaResult -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/LcaResult">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Result"/>
+        <rdfs:label>LCA Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Optimisation -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Optimisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:label xml:lang="en">Optimisation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Optimisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/OptimisationResult -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/OptimisationResult">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Result"/>
+        <rdfs:label>Optimisation Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/PhysicalState -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/PhysicalState">
+        <rdfs:label xml:lang="en">PhysicalState</rdfs:label>
+        <rdfs:label xml:lang="iri-based">PhysicalState</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Prediction -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Prediction">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:label xml:lang="en">Prediction</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Prediction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/PredictionResult -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/PredictionResult">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Result"/>
+        <rdfs:label>Prediction Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Result -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Result">
+        <rdfs:label xml:lang="en">Result</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/SensorDatabase -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/SensorDatabase">
+        <rdfs:label xml:lang="en">SensorDatabase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Service -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Service">
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Simulation -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Simulation">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Service"/>
+        <rdfs:label xml:lang="en">Simulation</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Simulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/SimulationResult -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/SimulationResult">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/state/Result"/>
+        <rdfs:label>Simulation Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/State -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/State">
+        <rdfs:label xml:lang="en">State</rdfs:label>
+        <rdfs:label xml:lang="iri-based">State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/Time -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/Time">
+        <rdfs:label xml:lang="en">Time</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/state/VirtualState -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/state/VirtualState">
+        <rdfs:label xml:lang="en">VirtualState</rdfs:label>
+        <rdfs:label xml:lang="iri-based">VirtualState</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
