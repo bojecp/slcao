@@ -1,0 +1,640 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://slca.org/slca/building/"
+     xml:base="http://slca.org/slca/building/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:slca-building="http://slca.org/slca/building/">
+    <owl:Ontology rdf:about="https://github.com/bojecp/slcao/owl/building/">
+        <dc:title xml:lang="en">SLCA-Building</dc:title>
+        <dcterms:contributor>Cardiff University</dcterms:contributor>
+        <dcterms:contributor>Luxembourg Institute of Science and Technology</dcterms:contributor>
+        <dcterms:license>https://creativecommons.org/licenses/by-sa/4.0/</dcterms:license>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/containedIn -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/containedIn">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Element"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/SpatialElement"/>
+        <rdfs:label xml:lang="en">containedIn</rdfs:label>
+        <rdfs:label xml:lang="iri-based">containedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/elementHasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/elementHasProperty">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Element"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementProperty"/>
+        <rdfs:label xml:lang="en">hasProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasConsumption -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasConsumption">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/BuildingSystem"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/EnergyConsumption"/>
+        <rdfs:label xml:lang="en">hasConsumption</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasConsumption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasElement -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasElement">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/Element"/>
+        <rdfs:label xml:lang="en">hasElement</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasElement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasElementType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasElementType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Element"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementType"/>
+        <rdfs:label xml:lang="en">hasElementType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasElementType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasFile -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasFile">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Model"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/File"/>
+        <rdfs:label xml:lang="en">hasFile</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasFile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasMaterial">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Element"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/Material"/>
+        <rdfs:label xml:lang="en">hasMaterial</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasMaterial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasMaterialType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasMaterialType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Material"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/MaterialType"/>
+        <rdfs:label xml:lang="en">hasMaterialType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasMaterialType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasModel -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasModel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/Model"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasOccupancyProfile -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasOccupancyProfile">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/OccupancyProfile"/>
+        <rdfs:label xml:lang="en">hasOccupancyProfile</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasOccupancyProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasProfile -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasProfile">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/Profile"/>
+        <rdfs:label xml:lang="en">hasArchetype</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasPropType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasPropType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementProperty"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementPropertyType"/>
+        <rdfs:label xml:lang="en">hasPropType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasSpatialElement -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasSpatialElement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/SpatialElement"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/SpatialElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasSystem -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasSystem">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/BuildingSystem"/>
+        <rdfs:label xml:lang="en">hasSystem</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasSystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasSystemSchedule -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasSystemSchedule">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/BuildingSystem"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/SystemSchedule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasSystemType -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasSystemType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/BuildingSystem"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/SystemType"/>
+        <rdfs:label xml:lang="en">hasSystemType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasSystemType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/hasUserProfile -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/hasUserProfile">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/UserProfile"/>
+        <rdfs:label xml:lang="en">hasUserProfile</rdfs:label>
+        <rdfs:label xml:lang="iri-based">hasUserProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/isPartOfSystem -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/bojecp/slcao/owl/building/isPartOfSystem">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Element"/>
+        <rdfs:range rdf:resource="https://github.com/bojecp/slcao/owl/building/BuildingSystem"/>
+        <rdfs:label xml:lang="en">isPartOfSystem</rdfs:label>
+        <rdfs:label xml:lang="iri-based">isPartOfSystem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingArchetypeLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingArchetypeLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">archetypeLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">buildingCategory</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingHeight -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingHeight">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">buildingHeight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingLevels -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingLevels">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">buildingLevels</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">buildingName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingSystemCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingSystemCategory">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/SystemType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">systemCategory</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingSystemLabel -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingSystemLabel">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/SystemType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">systemLabel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/buildingUsableSurface -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/buildingUsableSurface">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">usableSurface</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/materialMass -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/materialMass">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Material"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>materialMass</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/materialTypeName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/materialTypeName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/MaterialType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">materialName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/materialUvalue -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/materialUvalue">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/MaterialType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">u value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/materialVolume -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/materialVolume">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Material"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">materialVolume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/numberOfOccupants -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/numberOfOccupants">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/OccupancyProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">numberOfOccupants</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/propTypeName -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/propTypeName">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementPropertyType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">propTypeName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/propTypeUnit -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/propTypeUnit">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementPropertyType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">propTypeUnit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/propertyQuantity -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/propertyQuantity">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/ElementProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">propertyQuantity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/structureType -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/structureType">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">structureType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/timeInterval -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/timeInterval">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/OccupancyProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">timeInterval</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/yearOfConstruction -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/bojecp/slcao/owl/building/yearOfConstruction">
+        <rdfs:domain rdf:resource="https://github.com/bojecp/slcao/owl/building/Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/BEM -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/BEM">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/building/Model"/>
+        <rdfs:comment>Building Energy Model</rdfs:comment>
+        <rdfs:label>BEM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/BIM -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/BIM">
+        <rdfs:subClassOf rdf:resource="https://github.com/bojecp/slcao/owl/building/Model"/>
+        <rdfs:comment>Building Information Model</rdfs:comment>
+        <rdfs:label xml:lang="en">BIM</rdfs:label>
+        <rdfs:label xml:lang="iri-based">BIM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/Building -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/Building"/>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/BuildingSystem -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/BuildingSystem">
+        <rdfs:label xml:lang="en">BuildingSystem</rdfs:label>
+        <rdfs:label xml:lang="iri-based">BuildingSystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/Element -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/Element">
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/ElementProperty -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/ElementProperty">
+        <rdfs:label xml:lang="en">ElementProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/ElementPropertyType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/ElementPropertyType">
+        <rdfs:label xml:lang="en">PropertyType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/ElementType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/ElementType">
+        <rdfs:label xml:lang="en">ElementType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">ElementType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/EnergyConsumption -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/EnergyConsumption">
+        <rdfs:label xml:lang="en">EnergyConsumption</rdfs:label>
+        <rdfs:label xml:lang="iri-based">EnergyConsumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/File -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/File">
+        <rdfs:label xml:lang="en">File</rdfs:label>
+        <rdfs:label xml:lang="iri-based">File</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/Material -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/Material">
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/MaterialType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/MaterialType">
+        <rdfs:label xml:lang="en">MaterialType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">MaterialType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/Model -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/Model"/>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/OccupancyProfile -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/OccupancyProfile">
+        <rdfs:label xml:lang="en">OccupancyProfile</rdfs:label>
+        <rdfs:label xml:lang="iri-based">OccupancyProfile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/Profile -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/Profile">
+        <rdfs:label xml:lang="en">Archetype</rdfs:label>
+        <rdfs:label xml:lang="iri-based">Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/SpatialElement -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/SpatialElement">
+        <rdfs:label xml:lang="en">SpatialElement</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SpatialElement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/SystemSchedule -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/SystemSchedule">
+        <rdfs:label>System Schedule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/SystemType -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/SystemType">
+        <rdfs:label xml:lang="en">SystemType</rdfs:label>
+        <rdfs:label xml:lang="iri-based">SystemType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/bojecp/slcao/owl/building/UserProfile -->
+
+    <owl:Class rdf:about="https://github.com/bojecp/slcao/owl/building/UserProfile">
+        <rdfs:label xml:lang="en">UserProfile</rdfs:label>
+        <rdfs:label xml:lang="iri-based">UserProfile</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
