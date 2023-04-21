@@ -17,6 +17,9 @@ Each module is intended to be coupled with different specialised domain ontologi
 
 The current version of the ontology is not final, and represents work in progress by the SemanticLCA project consortium.
 
+You can directly import to Protégé a merged ontology file using this raw link:
+https://raw.githubusercontent.com/bojecp/slcao/main/owl/slca.owl
+
 # about SemanticLCA
 
 The SemanticLCA research project is an international collaboration effort between the Luxembourg
